@@ -7,7 +7,7 @@
   3. Madhuwanthi W.A.I 
   4. Athilani G.A.S
   5. Gunasiri G.C.S
-  6. Zeinab Sara
+  6. Sara A.N.Z
 
 ## Assignment Details
 - **Project Title**: Functional Testing of a Demo Application
