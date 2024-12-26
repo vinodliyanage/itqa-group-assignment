@@ -90,4 +90,3 @@ For more details on running the UI tests, refer to the [UI Tests README](./ui-te
 
 This project is licensed under the ISC License.
 
-

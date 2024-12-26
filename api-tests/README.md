@@ -22,8 +22,6 @@ This repository contains API tests for the library system. The tests are written
 
    To run the tests, you need the API server running locally. Start the server by executing the following command in your terminal:
 
-   For Windows (using `server.bat`):
-
    ```bash
    npm run server
    ```
@@ -63,7 +61,6 @@ api-tests/
 │   │   └── <feature-file-name>.cy.feature            // Feature 
 │       └── <step-definitions-file-name>.cy.mjs       // Step definitions for the feature files
 ├── package.json                                      // Project dependencies and scripts
-└── server.bat                                        // Script to start the server (Windows only)
 ```
 
 ### Key Files:
@@ -90,3 +87,4 @@ Ensure the server is running before executing the tests.
 ## License
 
 This project is licensed under the ISC License.
+
