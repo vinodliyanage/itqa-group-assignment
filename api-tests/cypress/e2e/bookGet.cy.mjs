@@ -1,1 +1,1 @@
-// TODO: add tests for getting list of books
+// TODO: add tests for getting a book by its id
