@@ -30,6 +30,16 @@ This project is organized into two main testing categories: API tests and UI tes
 
 ## How to Run the Tests
 
+### Prerequisite
+
+First, clone this repository to your local machine:
+
+```bash
+git clone https://github.com/vinodliyanage/itqa-group-assignment.git
+cd api-tests # for api testings
+cd ui-tests  # for ui
+```
+
 ### API Tests
 
 To run the API tests, follow these steps:
