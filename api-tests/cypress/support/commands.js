@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("createBook", (data, endpoint, token) => {
+  return cy.request({
+    method: "POST",
+    url: endpoint,
+    body: data,
+    headers: {
+      Authorization: `Basic ${token}`,
+      "Content-Type": "application/json",
+    },
+  });
+});
+
+Cypress.Commands.add("getAuthToken", (username, password) => {
+  const token = btoa(`${username}:${password}`);
+  return token;
+});
