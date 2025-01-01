@@ -22,5 +22,10 @@ export default defineConfig({
   e2e: {
     specPattern: "**/*.feature",
     setupNodeEvents,
+    video: true,
+    videosFolder: "cypress/videos",
+    trashAssetsBeforeRuns: true,
+    screenshotsFolder: "cypress/screenshots",
+    trashAssetsBeforeRuns: true,
   },
 });
