@@ -1,0 +1,35 @@
+name: API Tests
+
+on:
+  push:
+    paths:
+      - 'api-tests/'
+  pull_request:
+    paths:
+      - 'api-tests/'
+
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api-tests
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Start Server
+        run: npm run server &
+
+      - name: Run Cypress Tests
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: api-tests
