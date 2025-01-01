@@ -2,11 +2,9 @@ name: API Tests
 
 on:
   push:
-    paths:
-      - 'api-tests/'
+
   pull_request:
-    paths:
-      - 'api-tests/'
+
 
 jobs:
   api-tests:
