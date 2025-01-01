@@ -2,9 +2,13 @@ name: API Tests
 
 on:
   push:
-
+    branches:
+      - '*-api-tests-*'
+      - 'main'
   pull_request:
-
+    branches:
+      - '*-api-tests-*'
+      - 'main'
 
 jobs:
   api-tests:
