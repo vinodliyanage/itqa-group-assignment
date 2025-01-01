@@ -7,7 +7,7 @@ on:
       - 'main'
   pull_request:
     branches:
-      - '*-api-tests-*'
+      - '**/api-test/**'
       - 'main'
 
 jobs:
@@ -35,3 +35,15 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           working-directory: api-tests
+
+      - name: Upload Cypress Screenshots as Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-screenshots
+          path: api-tests/cypress/screenshots/
+      
+      - name: Upload Cypress Videos as Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-videos
+          path: api-tests/cypress/videos/
