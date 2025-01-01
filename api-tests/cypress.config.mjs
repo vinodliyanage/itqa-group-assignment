@@ -23,5 +23,10 @@ export default defineConfig({
     baseUrl: "http://localhost:7081",
     specPattern: "**/*.feature",
     setupNodeEvents,
+    video: true,
+    videosFolder: "cypress/videos",
+    trashAssetsBeforeRuns: true,
+    screenshotsFolder: "cypress/screenshots",
+    trashAssetsBeforeRuns: true,
   },
 });
