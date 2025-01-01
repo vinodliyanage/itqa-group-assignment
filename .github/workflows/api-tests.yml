@@ -3,7 +3,7 @@ name: API Tests
 on:
   push:
     branches:
-      - '*-api-tests-*'
+      - '**/api-test/**'
       - 'main'
   pull_request:
     branches:
