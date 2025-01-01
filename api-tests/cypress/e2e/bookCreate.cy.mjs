@@ -31,3 +31,5 @@ Then("the response body should contain {string} with value {string}", (field, va
 });
 
 // test github workflow trial 1
+
+let a = 10;
