@@ -37,14 +37,14 @@ jobs:
           working-directory: api-tests
 
       - name: Upload Cypress Screenshots as Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
           path: api-tests/cypress/screenshots/
         if: always()
-        
+
       - name: Upload Cypress Videos as Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
           path: api-tests/cypress/videos/
