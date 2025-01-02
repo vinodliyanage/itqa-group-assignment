@@ -38,3 +38,20 @@ Cypress.Commands.add("login", (username = "Admin", password = "admin123") => {
     cy.wait("@dashboard");
   });
 });
+
+Cypress.Commands.add("fillAddEmployeeForm", (data) => {
+  const { firstName, middleName, lastName, employeeId } = data;
+
+  cy.get('input[name="firstName"]').clear().type(firstName);
+  cy.get('input[name="middleName"]').clear().type(middleName);
+  cy.get('input[name="lastName"]').clear().type(lastName);
+
+  cy.get(".oxd-input-group")
+    .contains("label", /Employee Id/i)
+    .parents(".oxd-input-group")
+    .find("input")
+    .clear()
+    .type(employeeId);
+
+  cy.get('input[type="file"]').selectFile("cypress/fixtures/profile.jpg", { force: true });
+});
