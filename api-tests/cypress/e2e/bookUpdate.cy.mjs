@@ -1,78 +1,41 @@
-const { defineFeature, loadFeature } = require('jest-cucumber');
-const feature = loadFeature('./features/book-management.feature');
-const baseUrl = '/api/books';
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-defineFeature(feature, (test) => {
-  test('Get all books', ({ given, when, then, and }) => {
-    given('the application is running', function () {
-      cy.request({
-        method: 'GET',
-        url: baseUrl,
-        headers: {
-          Authorization: 'Basic YWRtaW46cGFzc3dvcmQ=',
-        },
-      }).then((response) => {
-        expect(response.status).to.be.oneOf([200, 204]);
-      });
-    });
+beforeEach(() => {
+  cy.wrap(null).as("response");
+  cy.wrap("").as("authToken");
+});
 
-    when('I send a GET request to "/api/books"', function () {
-      cy.request({
-        method: 'GET',
-        url: baseUrl,
-        headers: {
-          Authorization: 'Basic YWRtaW46cGFzc3dvcmQ=',
-        },
-      }).then((response) => {
-        this.response = response;
-      });
-    });
+Given("I am authenticated as {string} with password {string}", (username, password) => {
+  cy.getAuthToken(username, password).as("authToken");
+});
 
-    then('the response status code should be 200', function () {
-      expect(this.response.status).to.equal(200);
-    });
-
-    and('the response body should be an array of books', function () {
-      expect(this.response.body).to.be.an('array');
-    });
+Given("a book with ID {string} exists", (bookId) => {
+  // Wait for the auth token to be fetched before using it to create the book
+  cy.get("@authToken").then((token) => {
+    cy.createBook({ id: bookId, title: "Original Title", author: "Original Author" }, "/api/books", token);
   });
+});
 
-  test('Create a new book', ({ given, when, then, and }) => {
-    given('the application is running', function () {
-      cy.request({
-        method: 'GET',
-        url: baseUrl,
-        headers: {
-          Authorization: 'Basic YWRtaW46cGFzc3dvcmQ=',
-        },
-      }).then((response) => {
-        expect(response.status).to.be.oneOf([200, 204]);
-      });
-    });
+When("I make a PUT request to {string} with the following body:", (endpoint, dataTable) => {
+  const rawTable = dataTable.rawTable;
+  const headers = rawTable[0];
+  const row = rawTable[1];
 
-    when('I send a POST request to "/api/books" with the following data:', function (dataTable) {
-      const data = dataTable.hashes()[0];
-      cy.request({
-        method: 'POST',
-        url: baseUrl,
-        headers: {
-          Authorization: 'Basic YWRtaW46cGFzc3dvcmQ=',
-          'Content-Type': 'application/json',
-        },
-        body: data,
-      }).then((response) => {
-        this.response = response;
-      });
-    });
-
-    then('the response status code should be 201', function () {
-      expect(this.response.status).to.equal(201);
-    });
-
-    and('the response body should indicate the book was created', function () {
-      expect(this.response.body).to.have.property('id');
-      expect(this.response.body).to.have.property('title');
-      expect(this.response.body).to.have.property('author');
-    });
+  const requestData = Object.fromEntries(headers.map((key, index) => [key, row[index]]));
+  
+  cy.get("@authToken").then((token) => {
+    cy.updateBook(requestData, endpoint, token).as("response");
   });
+});
+
+Then("the response status code should be {int}", (statusCode) => {
+  cy.get("@response").its("status").should("eq", statusCode);
+});
+
+Then("the response body should contain {string} with value {string}", (field, value) => {
+  cy.get("@response").its("body").should("have.property", field).and("eq", value);
+});
+
+Then("the response body should indicate invalid input", () => {
+  cy.get("@response").its("body").should("have.property", "error").and("match", /Invalid input/);
 });
