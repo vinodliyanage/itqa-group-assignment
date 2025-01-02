@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("login", (username = "Admin", password = "admin123") => {
+  cy.session([username, password], () => {
+    cy.intercept("POST", "**/**/auth/validate").as("login");
+    cy.intercept("GET", "**/**/dashboard/index").as("dashboard");
+
+    cy.visit("/auth/login");
+    cy.get('input[name="username"]').type(username);
+    cy.get('input[name="password"]').type(password);
+    cy.get('button[type="submit"]').click();
+
+    cy.wait("@login");
+    cy.wait("@dashboard");
+  });
+});
