@@ -20,6 +20,7 @@ export async function setupNodeEvents(on, config) {
 
 export default defineConfig({
   e2e: {
+    baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php",
     specPattern: "**/*.feature",
     setupNodeEvents,
     video: true,
