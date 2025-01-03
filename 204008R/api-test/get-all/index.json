@@ -1,0 +1,136 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-01-03T19:44:20.842Z",
+    "end": "2025-01-03T19:44:50.562Z",
+    "duration": 29720
+  },
+  "results": [
+    {
+      "uuid": "37e7a5d4-3a78-4457-b648-c28af27c52f0",
+      "title": "",
+      "fullFile": "cypress/e2e/bookGetAll.cy.feature",
+      "file": "cypress/e2e/bookGetAll.cy.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "412e7e61-3271-48d7-ad3c-6cb82346b2b2",
+          "title": "Books API Testing",
+          "fullFile": "cypress/e2e/bookGetAll.cy.feature",
+          "file": "cypress/e2e/bookGetAll.cy.feature",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully get all Books by user as Admin",
+              "fullTitle": "Books API Testing Successfully get all Books by user as Admin",
+              "timedOut": null,
+              "duration": 4703,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected [] not to be empty",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected [] not to be empty\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:17651:62)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:17010:62)",
+                "diff": null
+              },
+              "uuid": "4bf8d411-adae-4f36-a0a7-22cf71b8dd4c",
+              "parentUUID": "412e7e61-3271-48d7-ad3c-6cb82346b2b2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Successfully get all Books by user as User",
+              "fullTitle": "Books API Testing Successfully get all Books by user as User",
+              "timedOut": null,
+              "duration": 4270,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected [] not to be empty",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected [] not to be empty\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:17651:62)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGetAll.cy.feature:17010:62)",
+                "diff": null
+              },
+              "uuid": "df719f82-0334-4f6a-ba78-0265c9087437",
+              "parentUUID": "412e7e61-3271-48d7-ad3c-6cb82346b2b2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4bf8d411-adae-4f36-a0a7-22cf71b8dd4c",
+            "df719f82-0334-4f6a-ba78-0265c9087437"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8973,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": false
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "saveJson": true,
+        "saveHtml": true,
+        "code": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
