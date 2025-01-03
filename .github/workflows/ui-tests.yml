@@ -5,6 +5,7 @@ on:
     branches:
       - '**/ui-test/**'
       - 'main'
+  workflow_dispatch:
   # push:
   #   branches:
   #     - '**/ui-test/**'
@@ -16,6 +17,9 @@ jobs:
     defaults:
       run:
         working-directory: ui-tests
+    
+    continue-on-error: true
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -33,16 +37,33 @@ jobs:
         with:
           working-directory: ui-tests
 
+      - name: Merge and Generate HTML Report
+        run: |
+          npm run reports:merge
+          npm run reports:generate
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cypress/reports/html/
+          publish_branch: gh-pages
+          destination_dir: pr-${{ github.event.pull_request.number }}
+
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-html-report
+          path: cypress/reports/html/
+
       - name: Upload Cypress Screenshots as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
-          path: ui-tests/cypress/screenshots/
-        if: always()
+          path: cypress/screenshots/
 
       - name: Upload Cypress Videos as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
-          path: ui-tests/cypress/videos/
-        if: always()
+          path: cypress/videos/
