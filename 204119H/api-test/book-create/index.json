@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2025-01-03T15:46:00.626Z",
-    "end": "2025-01-03T15:46:25.970Z",
-    "duration": 25344
+    "start": "2025-01-03T16:59:10.864Z",
+    "end": "2025-01-03T16:59:36.143Z",
+    "duration": 25279
   },
   "results": [
     {
-      "uuid": "896ae5fd-0e96-46ab-be83-3d568a25de4e",
+      "uuid": "8a5a1d94-90a9-468e-bfc6-f7d4cf6dc871",
       "title": "",
       "fullFile": "cypress/e2e/bookCreate.cy.feature",
       "file": "cypress/e2e/bookCreate.cy.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a5c2a8d0-7642-4cbb-badb-50d3c8d28e5c",
+          "uuid": "1861f037-bb31-4a87-8052-223380699d18",
           "title": "Book Creation",
           "fullFile": "cypress/e2e/bookCreate.cy.feature",
           "file": "cypress/e2e/bookCreate.cy.feature",
@@ -35,10 +35,10 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Fail to create a book with missing title",
-              "fullTitle": "Book Creation Fail to create a book with missing title",
+              "title": "User can not create a book with missing title",
+              "fullTitle": "Book Creation User can not create a book with missing title",
               "timedOut": null,
-              "duration": 4817,
+              "duration": 4833,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,16 +51,16 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: expected 201 to equal 400\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17629:43)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17010:62)",
                 "diff": "- 201\n+ 400\n"
               },
-              "uuid": "3fe24ef4-ea25-4715-9c0e-616b1dd64aef",
-              "parentUUID": "a5c2a8d0-7642-4cbb-badb-50d3c8d28e5c",
+              "uuid": "4f6f1c83-5f37-4e4a-8de4-69c7810d62eb",
+              "parentUUID": "1861f037-bb31-4a87-8052-223380699d18",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "Fail to create a book with a duplicate title and author when authenticated as admin",
-              "fullTitle": "Book Creation Fail to create a book with a duplicate title and author when authenticated as admin",
+              "title": "Admin can not create a book with a duplicate title and author",
+              "fullTitle": "Book Creation Admin can not create a book with a duplicate title and author",
               "timedOut": null,
-              "duration": 184,
+              "duration": 163,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -69,16 +69,16 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "a46e0f72-36dd-4fe7-a974-110262a45b83",
-              "parentUUID": "a5c2a8d0-7642-4cbb-badb-50d3c8d28e5c",
+              "uuid": "5fb8da6b-16c4-49a4-8ad1-c6007eeb941d",
+              "parentUUID": "1861f037-bb31-4a87-8052-223380699d18",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "Fail to create a book with a duplicate title and author when authenticated as user",
-              "fullTitle": "Book Creation Fail to create a book with a duplicate title and author when authenticated as user",
+              "title": "User can not create a book with a duplicate title and author",
+              "fullTitle": "Book Creation User can not create a book with a duplicate title and author",
               "timedOut": null,
-              "duration": 154,
+              "duration": 144,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -87,23 +87,23 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "6fbb0367-1ace-4006-a738-63871449bfdf",
-              "parentUUID": "a5c2a8d0-7642-4cbb-badb-50d3c8d28e5c",
+              "uuid": "c0c82217-6515-47c8-94f3-c186ce99d9ee",
+              "parentUUID": "1861f037-bb31-4a87-8052-223380699d18",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a46e0f72-36dd-4fe7-a974-110262a45b83",
-            "6fbb0367-1ace-4006-a738-63871449bfdf"
+            "5fb8da6b-16c4-49a4-8ad1-c6007eeb941d",
+            "c0c82217-6515-47c8-94f3-c186ce99d9ee"
           ],
           "failures": [
-            "3fe24ef4-ea25-4715-9c0e-616b1dd64aef"
+            "4f6f1c83-5f37-4e4a-8de4-69c7810d62eb"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 5155,
+          "duration": 5140,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
