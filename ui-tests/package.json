@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy": "npx cypress run",
-    "reports:merge": "npx mochawesome-merge cypress/reports/json/*.json -o cypress/reports/json/output.json",
-    "reports:generate": "npx marge cypress/reports/json/output.json -f report -o cypress/reports/html"
+    "cy": "npx cypress run"
   },
   "keywords": [],
   "author": "",
