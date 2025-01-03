@@ -26,10 +26,11 @@ export default defineConfig({
   reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
     charts: true,
-    reportDir: "cypress/reports/json",
-    overwrite: false,
+    reportDir: "cypress/reports",
+    overwrite: true,
     saveJson: true,
-    saveHtml: false,
+    saveHtml: true,
+    code: false,
   },
   e2e: {
     baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php",
