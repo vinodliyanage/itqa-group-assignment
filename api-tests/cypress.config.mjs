@@ -37,6 +37,8 @@ export default defineConfig({
     specPattern: "**/*.feature",
     setupNodeEvents,
     video: true,
+    screenshotOnRunFailure: true,
+    videoCompression: 32,
     videosFolder: "cypress/videos",
     trashAssetsBeforeRuns: true,
     screenshotsFolder: "cypress/screenshots",
