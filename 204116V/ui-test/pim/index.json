@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2025-01-03T13:34:41.285Z",
-    "end": "2025-01-03T13:34:54.781Z",
-    "duration": 13496
+    "start": "2025-01-03T13:48:16.441Z",
+    "end": "2025-01-03T13:48:34.793Z",
+    "duration": 18352
   },
   "results": [
     {
-      "uuid": "9681b390-ac68-496a-acb1-e294c020c35e",
+      "uuid": "e9e365cd-c129-4726-a957-3cfb7cc4681c",
       "title": "",
       "fullFile": "cypress/e2e/pim.cy.feature",
       "file": "cypress/e2e/pim.cy.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f010d90e-5960-448e-889d-58550da46d8d",
+          "uuid": "4dc6368c-92f5-49ac-a68a-2438ed3780d6",
           "title": "Add Employee",
           "fullFile": "cypress/e2e/pim.cy.feature",
           "file": "cypress/e2e/pim.cy.feature",
@@ -38,7 +38,7 @@
               "title": "Add Employee",
               "fullTitle": "Add Employee Add Employee",
               "timedOut": null,
-              "duration": 6472,
+              "duration": 6730,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": "[\n    {\n        \"title\": \"Spec video recording\",\n        \"value\": \"videos/pim.cy.feature.mp4\"\n    }\n]",
               "code": "",
               "err": {},
-              "uuid": "901c7f65-4e16-487d-85e4-8cf91b2da8dd",
-              "parentUUID": "f010d90e-5960-448e-889d-58550da46d8d",
+              "uuid": "27debd45-f65a-4002-8da5-4ebf24d4b51d",
+              "parentUUID": "4dc6368c-92f5-49ac-a68a-2438ed3780d6",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Add Employee with invalid first name, middle name, and last name",
               "fullTitle": "Add Employee Add Employee with invalid first name, middle name, and last name",
               "timedOut": null,
-              "duration": 5699,
+              "duration": 10267,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -65,12 +65,12 @@
               "context": "[\n    {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"screenshots/pim.cy.feature/Add%20Employee%20--%20Add%20Employee%20with%20invalid%20first%20name%2C%20middle%20name%2C%20and%20last%20name%20(failed).png\"\n    },\n    {\n        \"title\": \"Spec video recording\",\n        \"value\": \"videos/pim.cy.feature.mp4\"\n    }\n]",
               "code": "",
               "err": {
-                "message": "CypressError: Timed out retrying after 4000ms: Special character sequence: `{[,{=.}` is not recognized. Available sequences are: `selectAll, moveToStart, moveToEnd, del, backspace, esc, enter, rightArrow, leftArrow, upArrow, downArrow, home, end, insert, pageUp, pageDown, {, alt, option, ctrl, control, meta, command, cmd, shift`\n\nIf you want to skip parsing special character sequences and type the text exactly as written, pass the option: `{ parseSpecialCharSequences: false }`\n\nhttps://on.cypress.io/type",
-                "estack": "CypressError: Timed out retrying after 4000ms: Special character sequence: `{[,{=.}` is not recognized. Available sequences are: `selectAll, moveToStart, moveToEnd, del, backspace, esc, enter, rightArrow, leftArrow, upArrow, downArrow, home, end, insert, pageUp, pageDown, {, alt, option, ctrl, control, meta, command, cmd, shift`\n\nIf you want to skip parsing special character sequences and type the text exactly as written, pass the option: `{ parseSpecialCharSequences: false }`\n\nhttps://on.cypress.io/type\n    at onNoMatchingSpecialChars (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:115686:72)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:116101:5)\n    at arrayMap (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:18195:23)\n    at Function.map (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:27164:14)\n    at Keyboard.type (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:116488:73)\n    at type (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:115533:23)\n    at onReady (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:115735:20)\n    at runAllChecks (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:113317:14)\n    at retryActionability (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:113339:16)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise.attempt.Promise.try (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4338:29)\n    at whenStable (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:143744:68)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:143685:14)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1724:18)\n    at Promise._fulfill (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1668:18)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5473:46)\nFrom Your Spec Code:\n    at Context.eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/support/e2e.js:1750:47)",
-                "diff": null
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 200 to equal 400",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 200 to equal 400\n    at Context.eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:19733:63)\n    at Registry.runStepDefininition (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:10415:48)\n    at Object.fn (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:17014:43)\n    at runStepWithLogGroup (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:16474:29)\n    at Context.eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:17010:62)",
+                "diff": "- 200\n+ 400\n"
               },
-              "uuid": "36abc8db-2087-46b1-91e4-8725d1fa7c34",
-              "parentUUID": "f010d90e-5960-448e-889d-58550da46d8d",
+              "uuid": "01c6d097-fd12-40e8-ab21-4ffa0f7d7dc2",
+              "parentUUID": "4dc6368c-92f5-49ac-a68a-2438ed3780d6",
               "isHook": false,
               "skipped": false
             },
@@ -78,7 +78,7 @@
               "title": "Delete Employee",
               "fullTitle": "Add Employee Delete Employee",
               "timedOut": null,
-              "duration": 1160,
+              "duration": 1224,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -87,23 +87,23 @@
               "context": "[\n    {\n        \"title\": \"Spec video recording\",\n        \"value\": \"videos/pim.cy.feature.mp4\"\n    }\n]",
               "code": "",
               "err": {},
-              "uuid": "d0373966-f5a9-47bc-9274-fdcc171f24fb",
-              "parentUUID": "f010d90e-5960-448e-889d-58550da46d8d",
+              "uuid": "547a07d4-f8ca-41d6-9efa-d2aff9defd4b",
+              "parentUUID": "4dc6368c-92f5-49ac-a68a-2438ed3780d6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "901c7f65-4e16-487d-85e4-8cf91b2da8dd",
-            "d0373966-f5a9-47bc-9274-fdcc171f24fb"
+            "27debd45-f65a-4002-8da5-4ebf24d4b51d",
+            "547a07d4-f8ca-41d6-9efa-d2aff9defd4b"
           ],
           "failures": [
-            "36abc8db-2087-46b1-91e4-8725d1fa7c34"
+            "01c6d097-fd12-40e8-ab21-4ffa0f7d7dc2"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 13331,
+          "duration": 18221,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
