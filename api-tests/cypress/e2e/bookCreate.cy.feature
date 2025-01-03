@@ -1,4 +1,7 @@
 Feature: Book Creation
+  As a user
+  I want to create a book
+  So that I can add a new book to the library
 
   Scenario: Regular user can successfully create a book
     Given I am authenticated as "user" with password "password"
