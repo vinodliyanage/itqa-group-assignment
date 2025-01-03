@@ -44,7 +44,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ui-tests/cypress/reports/
           publish_branch: gh-pages
-          destination_dir: ${{ github.ref_name }}
+          destination_dir: ${{ github.head_ref }}
           tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
           tag_message: 'Deployment ${{ github.ref_name }}'
         if: always()
