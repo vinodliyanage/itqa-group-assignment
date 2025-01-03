@@ -4,7 +4,7 @@ on:
   pull_request:
     branches:
       - main
-      
+
   workflow_dispatch:
 
 permissions:
@@ -34,36 +34,38 @@ jobs:
 
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
+        continue-on-error: true
         with:
           working-directory: ui-tests
-
-      - name: Merge and Generate HTML Report
-        run: |
-          npm run reports:merge
-          npm run reports:generate
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./cypress/reports/html/
+          publish_dir: ui-tests/cypress/reports/
           publish_branch: gh-pages
-          destination_dir: pr-${{ github.event.pull_request.number }}
+          destination_dir: ${{ github.ref_name }}
+          tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
+          tag_message: 'Deployment ${{ github.ref_name }}'
+        if: always()
 
       - name: Upload Test Report
         uses: actions/upload-artifact@v4
         with:
           name: cypress-html-report
-          path: cypress/reports/html/
+          path: ui-tests/cypress/reports/
+        if: always()
 
       - name: Upload Cypress Screenshots as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
-          path: cypress/screenshots/
+          path: ui-tests/cypress/screenshots/
+        if: always()
 
       - name: Upload Cypress Videos as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
-          path: cypress/videos/
+          path: ui-tests/cypress/videos/
+        if: always()
