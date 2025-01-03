@@ -7,10 +7,6 @@ on:
       
   workflow_dispatch:
 
-  push:
-    branches:
-      - '**/ui-test/**'
-
 permissions:
   contents: write
 
