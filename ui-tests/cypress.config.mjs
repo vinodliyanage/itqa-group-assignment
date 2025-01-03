@@ -27,7 +27,7 @@ export default defineConfig({
   reporterOptions: {
     charts: true,
     reportDir: "cypress/reports",
-    overwrite: true,
+    overwrite: false,
     saveJson: true,
     saveHtml: true,
     code: false,
