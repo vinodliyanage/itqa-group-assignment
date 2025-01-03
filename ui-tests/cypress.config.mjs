@@ -39,6 +39,8 @@ export default defineConfig({
     video: true,
     videosFolder: "cypress/videos",
     trashAssetsBeforeRuns: true,
+    screenshotOnRunFailure: true,
+    videoCompression: 32,
     screenshotsFolder: "cypress/screenshots",
   },
 });
