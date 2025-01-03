@@ -46,9 +46,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ui-tests/cypress/reports/
           publish_branch: gh-pages
-          destination_dir: ${( steps.branch.outputs.BRANCH_NAME }}
+          destination_dir: ${{ steps.branch.outputs.BRANCH_NAME }}
         if: always()
-        
+
       - name: Upload Test Report
         uses: actions/upload-artifact@v4
         with:
