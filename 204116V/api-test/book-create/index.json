@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2025-01-03T14:14:59.470Z",
-    "end": "2025-01-03T14:15:24.849Z",
-    "duration": 25379
+    "start": "2025-01-03T16:25:38.643Z",
+    "end": "2025-01-03T16:26:04.142Z",
+    "duration": 25499
   },
   "results": [
     {
-      "uuid": "672ea623-e2cc-445e-9657-55b47e5dcb87",
+      "uuid": "e4ad0f23-ba7e-47ed-9164-e7f6752678b8",
       "title": "",
       "fullFile": "cypress/e2e/bookCreate.cy.feature",
       "file": "cypress/e2e/bookCreate.cy.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "16a9bf8c-eb06-489b-9eb8-f8bbd22dd61e",
+          "uuid": "23953ccc-e1db-4fed-aecb-868aaa21366b",
           "title": "Book Creation",
           "fullFile": "cypress/e2e/bookCreate.cy.feature",
           "file": "cypress/e2e/bookCreate.cy.feature",
@@ -38,7 +38,7 @@
               "title": "Regular user can successfully create a book",
               "fullTitle": "Book Creation Regular user can successfully create a book",
               "timedOut": null,
-              "duration": 677,
+              "duration": 638,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "d81336f1-7b6a-4bb1-a7fd-de1b1a07cd92",
-              "parentUUID": "16a9bf8c-eb06-489b-9eb8-f8bbd22dd61e",
+              "uuid": "a9d833f0-7728-4f68-81be-4d8a828b7bcd",
+              "parentUUID": "23953ccc-e1db-4fed-aecb-868aaa21366b",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Regular user can successfully create a book with optional id field",
               "fullTitle": "Book Creation Regular user can successfully create a book with optional id field",
               "timedOut": null,
-              "duration": 4305,
+              "duration": 4301,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,22 +69,22 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: expected 2 to equal '1000'\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17632:72)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17010:62)",
                 "diff": "- 2\n+ '1000'\n"
               },
-              "uuid": "c0c6491f-0dfc-4114-a89f-1c6096f253eb",
-              "parentUUID": "16a9bf8c-eb06-489b-9eb8-f8bbd22dd61e",
+              "uuid": "80f790d9-dac1-48be-8fa2-38174b92fcfd",
+              "parentUUID": "23953ccc-e1db-4fed-aecb-868aaa21366b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d81336f1-7b6a-4bb1-a7fd-de1b1a07cd92"
+            "a9d833f0-7728-4f68-81be-4d8a828b7bcd"
           ],
           "failures": [
-            "c0c6491f-0dfc-4114-a89f-1c6096f253eb"
+            "80f790d9-dac1-48be-8fa2-38174b92fcfd"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 4982,
+          "duration": 4939,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
