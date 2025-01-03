@@ -1,4 +1,4 @@
-Feature: Update functionality for OrangeHRM
+Feature: Update functionalities for OrangeHRM
     Scenario: Successfully updating my first name 
     When I visit OrangeHRM.com
     Then I should login
