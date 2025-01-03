@@ -1,0 +1,136 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-01-03T19:44:15.258Z",
+    "end": "2025-01-03T19:44:35.773Z",
+    "duration": 20515
+  },
+  "results": [
+    {
+      "uuid": "fe244d6b-54f6-4326-b1a8-24d5a90eb216",
+      "title": "",
+      "fullFile": "cypress/e2e/bookGet.cy.feature",
+      "file": "cypress/e2e/bookGet.cy.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e10e2acd-0fa6-4beb-ad5b-6332fea67191",
+          "title": "Get Book by ID API Testing",
+          "fullFile": "cypress/e2e/bookGet.cy.feature",
+          "file": "cypress/e2e/bookGet.cy.feature",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully get Book by ID as Admin",
+              "fullTitle": "Get Book by ID API Testing Successfully get Book by ID as Admin",
+              "timedOut": null,
+              "duration": 579,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:7081/api/books/1\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:7081/api/books/1\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Basic YWRtaW46cGFzc3dvcmQ=\",\n  \"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"set-cookie\": [\n    \"JSESSIONID=9BEA979B7FA00CECA583B6AADFF7457D; Path=/; HttpOnly\"\n  ],\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"DENY\",\n  \"content-type\": \"text/plain;charset=UTF-8\",\n  \"content-length\": \"14\",\n  \"date\": \"Fri, 03 Jan 2025 19:44:26 GMT\",\n  \"keep-alive\": \"timeout=60\",\n  \"connection\": \"keep-alive\"\n}\nBody: Book not found\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:7081/api/books/1\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:7081/api/books/1\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Basic YWRtaW46cGFzc3dvcmQ=\",\n  \"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"set-cookie\": [\n    \"JSESSIONID=9BEA979B7FA00CECA583B6AADFF7457D; Path=/; HttpOnly\"\n  ],\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"DENY\",\n  \"content-type\": \"text/plain;charset=UTF-8\",\n  \"content-length\": \"14\",\n  \"date\": \"Fri, 03 Jan 2025 19:44:26 GMT\",\n  \"keep-alive\": \"timeout=60\",\n  \"connection\": \"keep-alive\"\n}\nBody: Book not found\n\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:7081/__cypress/runner/cypress_runner.js:132876:72)\n    at tryCatcher (http://localhost:7081/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (http://localhost:7081/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (http://localhost:7081/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (http://localhost:7081/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (http://localhost:7081/__cypress/runner/cypress_runner.js:1724:18)\n    at _drainQueueStep (http://localhost:7081/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (http://localhost:7081/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (http://localhost:7081/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (http://localhost:7081/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at getBookById (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGet.cy.feature:17609:15)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGet.cy.feature:17635:13)",
+                "diff": null
+              },
+              "uuid": "596400dc-deb9-4842-aacc-dcd7227684c2",
+              "parentUUID": "e10e2acd-0fa6-4beb-ad5b-6332fea67191",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Successfully get Book by ID as User",
+              "fullTitle": "Get Book by ID API Testing Successfully get Book by ID as User",
+              "timedOut": null,
+              "duration": 212,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:7081/api/books/2\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:7081/api/books/2\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Basic dXNlcjpwYXNzd29yZA==\",\n  \"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 403 - Forbidden\nHeaders: {\n  \"set-cookie\": [\n    \"JSESSIONID=A0BB7F11D7FC71905E0B1D29BA2571F8; Path=/; HttpOnly\"\n  ],\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"DENY\",\n  \"content-type\": \"text/plain;charset=UTF-8\",\n  \"content-length\": \"22\",\n  \"date\": \"Fri, 03 Jan 2025 19:44:26 GMT\",\n  \"keep-alive\": \"timeout=60\",\n  \"connection\": \"keep-alive\"\n}\nBody: User is not permitted.\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:7081/api/books/2\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:7081/api/books/2\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Basic dXNlcjpwYXNzd29yZA==\",\n  \"user-agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 403 - Forbidden\nHeaders: {\n  \"set-cookie\": [\n    \"JSESSIONID=A0BB7F11D7FC71905E0B1D29BA2571F8; Path=/; HttpOnly\"\n  ],\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"DENY\",\n  \"content-type\": \"text/plain;charset=UTF-8\",\n  \"content-length\": \"22\",\n  \"date\": \"Fri, 03 Jan 2025 19:44:26 GMT\",\n  \"keep-alive\": \"timeout=60\",\n  \"connection\": \"keep-alive\"\n}\nBody: User is not permitted.\n\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:7081/__cypress/runner/cypress_runner.js:132876:72)\n    at tryCatcher (http://localhost:7081/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (http://localhost:7081/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (http://localhost:7081/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (http://localhost:7081/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (http://localhost:7081/__cypress/runner/cypress_runner.js:1724:18)\n    at _drainQueueStep (http://localhost:7081/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (http://localhost:7081/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (http://localhost:7081/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (http://localhost:7081/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at getBookById (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGet.cy.feature:17609:15)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookGet.cy.feature:17635:13)",
+                "diff": null
+              },
+              "uuid": "6cfb5956-f913-499b-bd7b-282ab2cc9e82",
+              "parentUUID": "e10e2acd-0fa6-4beb-ad5b-6332fea67191",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "596400dc-deb9-4842-aacc-dcd7227684c2",
+            "6cfb5956-f913-499b-bd7b-282ab2cc9e82"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 791,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": false
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "saveJson": true,
+        "saveHtml": true,
+        "code": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
