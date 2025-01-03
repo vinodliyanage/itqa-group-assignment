@@ -37,7 +37,6 @@ When("I make a DELETE request to {string} with the id", (endpoint) => {
     });
   }); 
 });
-
 Then("the delete response status code should be {int}", (statusCode) => {
     cy.get("@response").its("status").should("eq", statusCode);
 });
