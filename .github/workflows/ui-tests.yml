@@ -35,6 +35,8 @@ jobs:
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         continue-on-error: true
+        with:
+          working-directory: ui-tests
 
       - name: Merge and Generate HTML Report
         run: |
