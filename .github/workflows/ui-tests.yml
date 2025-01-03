@@ -1,25 +1,25 @@
-name: API Tests
+name: UI Tests
 
 on:
   pull_request:
     branches:
-      - '**/api-test/**'
-
+      - '**/ui-test/**'
+      - 'main'
   workflow_dispatch:
-  
+
   push:
     branches:
-      - '**/api-test/**'
+      - '**/ui-test/**'
 
 permissions:
   contents: write
 
 jobs:
-  api-tests:
+  ui-tests:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: api-tests
+        working-directory: ui-tests
     
     continue-on-error: true
 
@@ -35,43 +35,38 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Start Server
-        run: nohup npm run server &
-
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
-        continue-on-error: true
         with:
-          working-directory: api-tests
+          working-directory: ui-tests
+
+      - name: Merge and Generate HTML Report
+        run: |
+          npm run reports:merge
+          npm run reports:generate
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: api-tests/cypress/reports/
+          publish_dir: ./cypress/reports/html/
           publish_branch: gh-pages
-          destination_dir: ${{ github.ref_name }}
-          tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
-          tag_message: 'Deployment ${{ github.ref_name }}'
-        if: always()
+          destination_dir: pr-${{ github.event.pull_request.number }}
 
       - name: Upload Test Report
         uses: actions/upload-artifact@v4
         with:
           name: cypress-html-report
-          path: api-tests/cypress/reports/
-        if: always()
+          path: cypress/reports/html/
 
       - name: Upload Cypress Screenshots as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
-          path: api-tests/cypress/screenshots/
-        if: always()
+          path: cypress/screenshots/
 
       - name: Upload Cypress Videos as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
-          path: api-tests/cypress/videos/
-        if: always()
+          path: cypress/videos/
