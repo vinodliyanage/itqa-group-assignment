@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2025-01-03T13:49:06.740Z",
-    "end": "2025-01-03T13:49:25.216Z",
-    "duration": 18476
+    "start": "2025-01-03T14:14:40.458Z",
+    "end": "2025-01-03T14:15:00.044Z",
+    "duration": 19586
   },
   "results": [
     {
-      "uuid": "85a07846-2967-4a03-a139-54c630934426",
+      "uuid": "993dc17d-c5ea-433f-bde4-66475677f5a7",
       "title": "",
       "fullFile": "cypress/e2e/pim.cy.feature",
       "file": "cypress/e2e/pim.cy.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "085ef6eb-f1ce-4f3b-8ce0-735ceb97df8f",
+          "uuid": "d2dfd019-d63b-486c-a1e4-a5ae4af94654",
           "title": "Add Employee",
           "fullFile": "cypress/e2e/pim.cy.feature",
           "file": "cypress/e2e/pim.cy.feature",
@@ -38,7 +38,7 @@
               "title": "Add Employee",
               "fullTitle": "Add Employee Add Employee",
               "timedOut": null,
-              "duration": 6781,
+              "duration": 7551,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": "[\n    {\n        \"title\": \"Spec video recording\",\n        \"value\": \"videos/pim.cy.feature.mp4\"\n    }\n]",
               "code": "",
               "err": {},
-              "uuid": "3cfe5c98-6eda-4b8f-8589-001feb408a20",
-              "parentUUID": "085ef6eb-f1ce-4f3b-8ce0-735ceb97df8f",
+              "uuid": "a65c8acb-918f-4595-b649-d5e3a86f575f",
+              "parentUUID": "d2dfd019-d63b-486c-a1e4-a5ae4af94654",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Add Employee with invalid first name, middle name, and last name",
               "fullTitle": "Add Employee Add Employee with invalid first name, middle name, and last name",
               "timedOut": null,
-              "duration": 10333,
+              "duration": 10559,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,8 +69,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: expected 200 to equal 400\n    at Context.eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:19733:63)\n    at Registry.runStepDefininition (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:10415:48)\n    at Object.fn (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:17014:43)\n    at runStepWithLogGroup (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:16474:29)\n    at Context.eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress/e2e/pim.cy.feature:17010:62)",
                 "diff": "- 200\n+ 400\n"
               },
-              "uuid": "fe28cd6c-88c8-42de-aeb9-e956b2cc9c8a",
-              "parentUUID": "085ef6eb-f1ce-4f3b-8ce0-735ceb97df8f",
+              "uuid": "454d4491-693a-46e4-bc0d-05e1dccdfe9e",
+              "parentUUID": "d2dfd019-d63b-486c-a1e4-a5ae4af94654",
               "isHook": false,
               "skipped": false
             },
@@ -78,7 +78,7 @@
               "title": "Delete Employee",
               "fullTitle": "Add Employee Delete Employee",
               "timedOut": null,
-              "duration": 1227,
+              "duration": 1307,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -87,23 +87,23 @@
               "context": "[\n    {\n        \"title\": \"Spec video recording\",\n        \"value\": \"videos/pim.cy.feature.mp4\"\n    }\n]",
               "code": "",
               "err": {},
-              "uuid": "8f1160ef-18c3-4374-b8ce-ccdf8bce35d8",
-              "parentUUID": "085ef6eb-f1ce-4f3b-8ce0-735ceb97df8f",
+              "uuid": "36a18dc1-602f-463d-9a7b-0cbd69136759",
+              "parentUUID": "d2dfd019-d63b-486c-a1e4-a5ae4af94654",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3cfe5c98-6eda-4b8f-8589-001feb408a20",
-            "8f1160ef-18c3-4374-b8ce-ccdf8bce35d8"
+            "a65c8acb-918f-4595-b649-d5e3a86f575f",
+            "36a18dc1-602f-463d-9a7b-0cbd69136759"
           ],
           "failures": [
-            "fe28cd6c-88c8-42de-aeb9-e956b2cc9c8a"
+            "454d4491-693a-46e4-bc0d-05e1dccdfe9e"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 18341,
+          "duration": 19417,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
