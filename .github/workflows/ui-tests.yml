@@ -3,7 +3,7 @@ name: UI Tests
 on:
   pull_request:
     branches:
-      - '**/ui-test/**'
+      - main
       
   workflow_dispatch:
 
@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   ui-tests:
+    if: contains(github.head_ref, 'ui-test')
     runs-on: ubuntu-latest
     defaults:
       run:
