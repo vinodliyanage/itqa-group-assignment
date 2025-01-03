@@ -11,6 +11,9 @@ on:
   #     - '**/ui-test/**'
   #     - 'main'
 
+permissions:
+  contents: write
+  
 jobs:
   ui-tests:
     runs-on: ubuntu-latest
@@ -56,15 +59,18 @@ jobs:
         with:
           name: cypress-html-report
           path: cypress/reports/html/
+        if: always()
 
       - name: Upload Cypress Screenshots as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
           path: cypress/screenshots/
+        if: always()
 
       - name: Upload Cypress Videos as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
           path: cypress/videos/
+        if: always()
