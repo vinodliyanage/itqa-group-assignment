@@ -4,7 +4,7 @@ on:
   pull_request:
     branches:
       - '**/ui-test/**'
-      - 'main'
+      
   workflow_dispatch:
 
   push:
