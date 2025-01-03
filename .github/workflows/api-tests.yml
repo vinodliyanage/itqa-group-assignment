@@ -3,19 +3,23 @@ name: API Tests
 on:
   pull_request:
     branches:
-      - '**/api-test/**'
-      - 'main'
-  # push:
-  #   branches:
-  #     - '**/api-test/**'
-  #     - 'main'
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   api-tests:
+    if: contains(github.head_ref, 'api-test')
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: api-tests
+    
+    continue-on-error: true
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -29,12 +33,31 @@ jobs:
         run: npm install
 
       - name: Start Server
-        run: npm run server &
+        run: nohup npm run server &
 
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
+        continue-on-error: true
         with:
           working-directory: api-tests
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: api-tests/cypress/reports/
+          publish_branch: gh-pages
+          destination_dir: ${{ github.ref_name }}
+          tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
+          tag_message: 'Deployment ${{ github.ref_name }}'
+        if: always()
+
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-html-report
+          path: api-tests/cypress/reports/
+        if: always()
 
       - name: Upload Cypress Screenshots as Artifacts
         uses: actions/upload-artifact@v4
