@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-01-03T15:26:14.953Z",
+    "end": "2025-01-03T15:26:42.555Z",
+    "duration": 27602
+  },
+  "results": [
+    {
+      "uuid": "80b1c26c-8c5b-4dfc-a13b-c0138603e4b5",
+      "title": "",
+      "fullFile": "cypress/e2e/bookUpdate.cy.feature",
+      "file": "cypress/e2e/bookUpdate.cy.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "528fbc6c-ce9b-4bad-9532-88773c988a50",
+          "title": "Update Book API",
+          "fullFile": "cypress/e2e/bookUpdate.cy.feature",
+          "file": "cypress/e2e/bookUpdate.cy.feature",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully update a book",
+              "fullTitle": "Update Book API Successfully update a book",
+              "timedOut": null,
+              "duration": 737,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "a42d8f95-34d7-4fce-b578-99dafa9be0c4",
+              "parentUUID": "528fbc6c-ce9b-4bad-9532-88773c988a50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update a book with missing required fields",
+              "fullTitle": "Update Book API Update a book with missing required fields",
+              "timedOut": null,
+              "duration": 4326,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 200 to equal 400",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 200 to equal 400\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17634:43)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17010:62)",
+                "diff": "- 200\n+ 400\n"
+              },
+              "uuid": "11ecee59-d3d6-446c-bba3-028b57f895b0",
+              "parentUUID": "528fbc6c-ce9b-4bad-9532-88773c988a50",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a42d8f95-34d7-4fce-b578-99dafa9be0c4"
+          ],
+          "failures": [
+            "11ecee59-d3d6-446c-bba3-028b57f895b0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5063,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": false
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "saveJson": true,
+        "saveHtml": true,
+        "code": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
