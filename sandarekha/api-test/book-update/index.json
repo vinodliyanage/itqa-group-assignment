@@ -1,0 +1,159 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-01-03T15:38:27.696Z",
+    "end": "2025-01-03T15:39:03.434Z",
+    "duration": 35738
+  },
+  "results": [
+    {
+      "uuid": "80f64c01-5b61-45fe-8477-777231ffc0a3",
+      "title": "",
+      "fullFile": "cypress/e2e/bookUpdate.cy.feature",
+      "file": "cypress/e2e/bookUpdate.cy.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ccf29d1-af60-4fe3-b0a0-7c298f25fb1f",
+          "title": "Update Book API - Validate Response Codes and Data",
+          "fullFile": "cypress/e2e/bookUpdate.cy.feature",
+          "file": "cypress/e2e/bookUpdate.cy.feature",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fail when updating a book with an unexpected parameter",
+              "fullTitle": "Update Book API - Validate Response Codes and Data Fail when updating a book with an unexpected parameter",
+              "timedOut": null,
+              "duration": 4784,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 404 to equal 400",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 404 to equal 400\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17639:43)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17010:62)",
+                "diff": "- 404\n+ 400\n"
+              },
+              "uuid": "c50d7193-67f7-44f0-afb8-36b5dea6c4c0",
+              "parentUUID": "2ccf29d1-af60-4fe3-b0a0-7c298f25fb1f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fail when updating a book with invalid title and author types",
+              "fullTitle": "Update Book API - Validate Response Codes and Data Fail when updating a book with invalid title and author types",
+              "timedOut": null,
+              "duration": 4212,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 404 to equal 400",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 404 to equal 400\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17671:45)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17010:62)",
+                "diff": "- 404\n+ 400\n"
+              },
+              "uuid": "5cf735b3-ec41-48f7-ab48-049a84e2eb6c",
+              "parentUUID": "2ccf29d1-af60-4fe3-b0a0-7c298f25fb1f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update only the author field without changing the title",
+              "fullTitle": "Update Book API - Validate Response Codes and Data Update only the author field without changing the title",
+              "timedOut": null,
+              "duration": 4287,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 208 to equal 200",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 208 to equal 200\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17722:43)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17010:62)",
+                "diff": "- 208\n+ 200\n"
+              },
+              "uuid": "68a29533-8cc6-434f-a8b8-4bbf7e10ba5e",
+              "parentUUID": "2ccf29d1-af60-4fe3-b0a0-7c298f25fb1f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c50d7193-67f7-44f0-afb8-36b5dea6c4c0",
+            "5cf735b3-ec41-48f7-ab48-049a84e2eb6c",
+            "68a29533-8cc6-434f-a8b8-4bbf7e10ba5e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13283,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": false
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/.jsons",
+        "overwrite": false,
+        "saveJson": true,
+        "saveHtml": true,
+        "code": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
