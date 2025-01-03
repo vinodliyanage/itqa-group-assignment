@@ -1,4 +1,4 @@
-name: API Tests
+name: UI Tests
 
 on:
   pull_request:
@@ -11,12 +11,12 @@ permissions:
   contents: write
 
 jobs:
-  api-tests:
-    if: contains(github.head_ref, 'api-test')
+  ui-tests:
+    if: contains(github.head_ref, 'ui-test')
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: api-tests
+        working-directory: ui-tests
     
     continue-on-error: true
 
@@ -32,20 +32,17 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Start Server
-        run: nohup npm run server &
-
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         continue-on-error: true
         with:
-          working-directory: api-tests
+          working-directory: ui-tests
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: api-tests/cypress/reports/
+          publish_dir: ui-tests/cypress/reports/
           publish_branch: gh-pages
           destination_dir: ${{ github.head_ref }}
           tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
@@ -56,19 +53,19 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-html-report
-          path: api-tests/cypress/reports/
+          path: ui-tests/cypress/reports/
         if: always()
 
       - name: Upload Cypress Screenshots as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
-          path: api-tests/cypress/screenshots/
+          path: ui-tests/cypress/screenshots/
         if: always()
 
       - name: Upload Cypress Videos as Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
-          path: api-tests/cypress/videos/
+          path: ui-tests/cypress/videos/
         if: always()
