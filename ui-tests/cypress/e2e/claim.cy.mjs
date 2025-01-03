@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 beforeEach(() => {
-  cy.login(); 
+  cy.login();
 });
 
 Given("I am on the Events page", () => {
@@ -9,23 +9,18 @@ Given("I am on the Events page", () => {
 });
 
 When("I click on the delete button for the first event", () => {
-  cy.get("button")
-    .find("i.oxd-icon.bi-trash") 
-    .first() 
-    .click(); 
+  cy.get("button").find("i.oxd-icon.bi-trash").first().click();
 });
 
 Then("I should see a confirmation dialog", () => {
   cy.get(".oxd-dialog-sheet")
-    .should("exist") 
-    .contains("Are you sure ?") 
+    .should("exist")
+    .contains("Are you sure you want to continue?")
     .should("exist");
 });
 
 Then("I click on the confirm button", () => {
-  cy.get(".oxd-dialog-sheet")
-    .contains("Yes, Delete") 
-    .click(); 
+  cy.get(".oxd-dialog-sheet").contains("Yes, Delete").click();
 });
 
 Then("I should see a successfully deleted message", () => {
@@ -33,3 +28,4 @@ Then("I should see a successfully deleted message", () => {
     .should("exist")
     .contains(/successfully deleted/i);
 });
+
