@@ -26,7 +26,7 @@ export default defineConfig({
   reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
     charts: true,
-    reportDir: "cypress/reports/json",
+    reportDir: "cypress/reports",
     overwrite: false,
     saveJson: true,
     saveHtml: false,
