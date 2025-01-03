@@ -14,6 +14,12 @@ export async function setupNodeEvents(on, config) {
     })
   );
 
+  on('after:spec', (spec, results) => {
+    if (results && results.stats.failures > 0) {
+        console.log('Test failed:', spec.relative);
+    }
+  });
+
   // Make sure to return the config object as it might have been modified by the plugin.
   return config;
 }

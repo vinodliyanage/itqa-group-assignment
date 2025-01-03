@@ -40,3 +40,14 @@ Cypress.Commands.add("getAuthToken", (username, password) => {
   const token = btoa(`${username}:${password}`);
   return token;
 });
+
+Cypress.Commands.add("deleteBook", (id, endpoint, token) => {
+  return cy.request({
+    method: "DELETE",
+    url: endpoint + id,
+    headers: {
+      Authorization: `Basic ${token}`,
+      "Content-Type": "application/json",
+    },
+  });
+});
