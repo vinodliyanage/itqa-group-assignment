@@ -2,9 +2,14 @@ import { defineConfig } from "cypress";
 import createBundler from "@bahmutov/cypress-esbuild-preprocessor";
 import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-preprocessor";
 import { createEsbuildPlugin } from "@badeball/cypress-cucumber-preprocessor/esbuild";
+import cypressMochawesomeReporter from "cypress-mochawesome-reporter/plugin.js";
+import cypressOnFix from "cypress-on-fix";
 
-export async function setupNodeEvents(on, config) {
-  // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
+async function setupNodeEvents(on, config) {
+  on = cypressOnFix(on);
+
+  cypressMochawesomeReporter(on);
+
   await addCucumberPreprocessorPlugin(on, config);
 
   on(
@@ -14,11 +19,19 @@ export async function setupNodeEvents(on, config) {
     })
   );
 
-  // Make sure to return the config object as it might have been modified by the plugin.
   return config;
 }
 
 export default defineConfig({
+  reporter: "cypress-mochawesome-reporter",
+  reporterOptions: {
+    charts: true,
+    reportDir: "cypress/reports",
+    overwrite: true,
+    saveJson: true,
+    saveHtml: true,
+    code: false,
+  },
   e2e: {
     baseUrl: "http://localhost:7081",
     specPattern: "**/*.feature",
@@ -27,6 +40,5 @@ export default defineConfig({
     videosFolder: "cypress/videos",
     trashAssetsBeforeRuns: true,
     screenshotsFolder: "cypress/screenshots",
-    trashAssetsBeforeRuns: true,
   },
 });

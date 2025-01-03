@@ -6,10 +6,13 @@ on:
       - '**/ui-test/**'
       - 'main'
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - '**/ui-test/**'
-  #     - 'main'
+
+  push:
+    branches:
+      - '**/ui-test/**'
+
+permissions:
+  contents: write
 
 jobs:
   ui-tests:
