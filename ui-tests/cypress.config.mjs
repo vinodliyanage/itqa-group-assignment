@@ -26,7 +26,7 @@ export default defineConfig({
   reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
     charts: true,
-    reportDir: "cypress/reports/json",
+    reportDir: "cypress/reports",
     overwrite: false,
     saveJson: true,
     saveHtml: false,
@@ -38,6 +38,8 @@ export default defineConfig({
     video: true,
     videosFolder: "cypress/videos",
     trashAssetsBeforeRuns: true,
+    screenshotOnRunFailure: true,
+    videoCompression: 32,
     screenshotsFolder: "cypress/screenshots",
   },
 });
