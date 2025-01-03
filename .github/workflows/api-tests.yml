@@ -3,7 +3,7 @@ name: API Tests
 on:
   pull_request:
     branches:
-      - '**/api-test/**'
+      - main
 
   workflow_dispatch:
   
@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   api-tests:
+    if: contains(github.head_ref, 'api-test')
     runs-on: ubuntu-latest
     defaults:
       run:
