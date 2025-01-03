@@ -30,9 +30,9 @@ Cypress.Commands.add("login", (username = "Admin", password = "admin123") => {
     cy.intercept("GET", "**/**/dashboard/index").as("dashboard");
 
     cy.visit("/auth/login");
-    cy.get('input[name="username"]').type(username);
-    cy.get('input[name="password"]').type(password);
-    cy.get('button[type="submit"]').click();
+    cy.get('input[name="username"]', { timeout: 10000 }).type(username);
+    cy.get('input[name="password"]', { timeout: 10000 }).type(password);
+    cy.get('button[type="submit"]', { timeout: 10000 }).click();
 
     cy.wait("@login");
     cy.wait("@dashboard");
