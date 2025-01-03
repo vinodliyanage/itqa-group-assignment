@@ -6,10 +6,6 @@ on:
       - main
 
   workflow_dispatch:
-  
-  push:
-    branches:
-      - '**/api-test/**'
 
 permissions:
   contents: write
