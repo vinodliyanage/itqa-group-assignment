@@ -36,7 +36,21 @@ Cypress.Commands.add("createBook", (data, endpoint, token) => {
   });
 });
 
+Cypress.Commands.add("updateBook", (data, endpoint, token) => {
+  return cy.request({
+    method: "PUT",
+    url: endpoint,
+    body: data,
+    headers: {
+      Authorization: `Bearer ${token}`,  // Use Bearer for token-based authentication
+      "Content-Type": "application/json",
+    },
+  });
+});
+
 Cypress.Commands.add("getAuthToken", (username, password) => {
   const token = btoa(`${username}:${password}`);
   return token;
 });
+
+

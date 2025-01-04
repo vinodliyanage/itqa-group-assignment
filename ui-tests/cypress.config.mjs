@@ -29,7 +29,8 @@ export default defineConfig({
     reportDir: "cypress/reports",
     overwrite: false,
     saveJson: true,
-    saveHtml: false,
+    saveHtml: true,
+    code: false,
   },
   e2e: {
     baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php",
@@ -43,3 +44,4 @@ export default defineConfig({
     screenshotsFolder: "cypress/screenshots",
   },
 });
+//

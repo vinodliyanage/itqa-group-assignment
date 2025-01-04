@@ -33,4 +33,3 @@ Then("the response body should contain {string} with value {string}", (field, va
 Then("the response body should contain an error message {string}", (message) => {
   cy.get("@response").its("body").should("eq", message);
 });
-
