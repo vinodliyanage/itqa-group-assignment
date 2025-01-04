@@ -1,5 +1,11 @@
 # QA Automation Assignment: Functional Testing with Cypress and Cucumber
 
+## Test Report
+
+[204116V API Test Report](https://vinodliyanage.github.io/itqa-group-assignment/204116V/api-test/book-create/index.html)
+[204116V UI Test Report](https://vinodliyanage.github.io/itqa-group-assignment/204116V/ui-test/pim/index.html)
+
+
 ## Submitted By:
 - **Team Members**:
   1. Dileesha G A S
