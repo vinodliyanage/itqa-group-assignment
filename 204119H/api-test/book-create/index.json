@@ -1,24 +1,106 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 3,
-    "passes": 2,
+    "suites": 2,
+    "tests": 7,
+    "passes": 4,
     "pending": 0,
-    "failures": 1,
-    "testsRegistered": 3,
-    "passPercent": 66.66666666666667,
+    "failures": 3,
+    "testsRegistered": 7,
+    "passPercent": 57.142857142857146,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2025-01-03T16:59:10.864Z",
-    "end": "2025-01-03T16:59:36.143Z",
-    "duration": 25279
+    "start": "2025-01-04T04:28:54.227Z",
+    "end": "2025-01-04T04:29:28.671Z",
+    "duration": 34444
   },
   "results": [
     {
-      "uuid": "8a5a1d94-90a9-468e-bfc6-f7d4cf6dc871",
+      "uuid": "a035f10b-9b1b-4a76-88e3-b64511849f32",
+      "title": "",
+      "fullFile": "cypress/e2e/bookUpdate.cy.feature",
+      "file": "cypress/e2e/bookUpdate.cy.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8bcb07e3-b5e4-4631-9f7a-68991a18aa75",
+          "title": "Update Book API",
+          "fullFile": "cypress/e2e/bookUpdate.cy.feature",
+          "file": "cypress/e2e/bookUpdate.cy.feature",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully update a book",
+              "fullTitle": "Update Book API Successfully update a book",
+              "timedOut": null,
+              "duration": 198,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "444ae829-ba9d-467d-9287-c3d88796c49b",
+              "parentUUID": "8bcb07e3-b5e4-4631-9f7a-68991a18aa75",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update a book with missing required fields",
+              "fullTitle": "Update Book API Update a book with missing required fields",
+              "timedOut": null,
+              "duration": 4221,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 200 to equal 400",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 200 to equal 400\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17634:43)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookUpdate.cy.feature:17010:62)",
+                "diff": "- 200\n+ 400\n"
+              },
+              "uuid": "e28ca535-35a6-434b-9f38-88dd5a86d5e8",
+              "parentUUID": "8bcb07e3-b5e4-4631-9f7a-68991a18aa75",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "444ae829-ba9d-467d-9287-c3d88796c49b"
+          ],
+          "failures": [
+            "e28ca535-35a6-434b-9f38-88dd5a86d5e8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4419,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "89d4a2df-caff-41c6-8391-65d13525d86e",
       "title": "",
       "fullFile": "cypress/e2e/bookCreate.cy.feature",
       "file": "cypress/e2e/bookCreate.cy.feature",
@@ -27,7 +109,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1861f037-bb31-4a87-8052-223380699d18",
+          "uuid": "a96b57ce-7f90-43dc-8900-0173a9298ec7",
           "title": "Book Creation",
           "fullFile": "cypress/e2e/bookCreate.cy.feature",
           "file": "cypress/e2e/bookCreate.cy.feature",
@@ -38,7 +120,7 @@
               "title": "User can not create a book with missing title",
               "fullTitle": "Book Creation User can not create a book with missing title",
               "timedOut": null,
-              "duration": 4833,
+              "duration": 4774,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +133,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: expected 201 to equal 400\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17629:43)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17010:62)",
                 "diff": "- 201\n+ 400\n"
               },
-              "uuid": "4f6f1c83-5f37-4e4a-8de4-69c7810d62eb",
-              "parentUUID": "1861f037-bb31-4a87-8052-223380699d18",
+              "uuid": "f4ecbccd-2c43-41d4-a718-b2ee46c5895f",
+              "parentUUID": "a96b57ce-7f90-43dc-8900-0173a9298ec7",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +142,7 @@
               "title": "Admin can not create a book with a duplicate title and author",
               "fullTitle": "Book Creation Admin can not create a book with a duplicate title and author",
               "timedOut": null,
-              "duration": 163,
+              "duration": 169,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -69,8 +151,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "5fb8da6b-16c4-49a4-8ad1-c6007eeb941d",
-              "parentUUID": "1861f037-bb31-4a87-8052-223380699d18",
+              "uuid": "0237a71a-7d4c-4829-9f0e-82a6a09b1c92",
+              "parentUUID": "a96b57ce-7f90-43dc-8900-0173a9298ec7",
               "isHook": false,
               "skipped": false
             },
@@ -78,7 +160,7 @@
               "title": "User can not create a book with a duplicate title and author",
               "fullTitle": "Book Creation User can not create a book with a duplicate title and author",
               "timedOut": null,
-              "duration": 144,
+              "duration": 148,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -87,23 +169,65 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "c0c82217-6515-47c8-94f3-c186ce99d9ee",
-              "parentUUID": "1861f037-bb31-4a87-8052-223380699d18",
+              "uuid": "db03af31-f668-4407-9735-7f88cb3da55a",
+              "parentUUID": "a96b57ce-7f90-43dc-8900-0173a9298ec7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Regular user can successfully create a book",
+              "fullTitle": "Book Creation Regular user can successfully create a book",
+              "timedOut": null,
+              "duration": 133,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "6c3aa55a-1e34-43d4-9055-f9f49ec7dd96",
+              "parentUUID": "a96b57ce-7f90-43dc-8900-0173a9298ec7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Regular user can successfully create a book with optional id field",
+              "fullTitle": "Book Creation Regular user can successfully create a book with optional id field",
+              "timedOut": null,
+              "duration": 4235,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 5 to equal '1000'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 5 to equal '1000'\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17632:72)\n    at Registry.runStepDefininition (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:10415:48)\n    at Object.fn (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17014:43)\n    at runStepWithLogGroup (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:16474:29)\n    at Context.eval (http://localhost:7081/__cypress/tests?p=cypress/e2e/bookCreate.cy.feature:17010:62)",
+                "diff": "- 5\n+ '1000'\n"
+              },
+              "uuid": "c2f6e727-a385-4c06-900f-68a6c5ccdd53",
+              "parentUUID": "a96b57ce-7f90-43dc-8900-0173a9298ec7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5fb8da6b-16c4-49a4-8ad1-c6007eeb941d",
-            "c0c82217-6515-47c8-94f3-c186ce99d9ee"
+            "0237a71a-7d4c-4829-9f0e-82a6a09b1c92",
+            "db03af31-f668-4407-9735-7f88cb3da55a",
+            "6c3aa55a-1e34-43d4-9055-f9f49ec7dd96"
           ],
           "failures": [
-            "4f6f1c83-5f37-4e4a-8de4-69c7810d62eb"
+            "f4ecbccd-2c43-41d4-a718-b2ee46c5895f",
+            "c2f6e727-a385-4c06-900f-68a6c5ccdd53"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 5140,
+          "duration": 9459,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
