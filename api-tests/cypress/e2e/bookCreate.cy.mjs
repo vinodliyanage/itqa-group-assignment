@@ -29,3 +29,7 @@ Then("the response status code should be {int}", (statusCode) => {
 Then("the response body should contain {string} with value {string}", (field, value) => {
   cy.get("@response").its("body").should("have.property", field).and("eq", value);
 });
+
+Then("the response body should contain an error message {string}", (message) => {
+  cy.get("@response").its("body").should("eq", message);
+});
